@@ -1,13 +1,14 @@
 class HeroPowersController < ApplicationController
      rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
-    # to be deleted
+   
     def index
         render json: HeroPower.all
     end
 
     def create
-        render json: HeroPower.create!(hero_power_params), status: :created
+        hero_power = HeroPower.create!(hero_power_params)
+        render json: hero_power.hero, status: :created, serializer: HeroandpowerSerializer
     end
 
     private
