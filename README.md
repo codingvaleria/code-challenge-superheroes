@@ -22,7 +22,6 @@ Superheroes API is a RESTful API that tracks heroes and their superpowers. It pr
     - Ruby on Rails 7.0.4
     - Postman (for testing endpoints)
 
-
 ## Setup Installation
 
     - Clone repository
@@ -40,42 +39,45 @@ Superheroes API is a RESTful API that tracks heroes and their superpowers. It pr
 
 ## Endpoints/Routes
 
-### GET /heros
+### GET /heroes
 
 Returns a list of all heroes
 
 ```JSON
-{
+[
+  {
     "id": 1,
-    "name": "Peter Parker",
-    "super_name": "Spiderman"
-},
-{
+    "name": "Orpha Kunde CPA",
+    "super_name": "Supah Hercules"
+  },
+  {
     "id": 2,
-    "name": "Oliver Queen",
-    "super_name": "Green Arrow"
-}
+    "name": "Londa Little",
+    "super_name": "Bishop the Fated"
+  }
 ```
 
-### GET /heros/:id
+]
+
+### GET /heroes/:id
 
 Returns JSON data about the hero if the hero exists
 
 ```
 {
   "id": 1,
-  "name": "Peter Parker",
-  "super_name": "Spiderman",
+  "name": "Orpha Kunde CPA",
+  "super_name": "Supah Hercules",
   "powers": [
     {
-      "id": 2,
-      "name": "flight",
-      "description": "gives the wielder the ability to fly through the skies at supersonic speed"
+      "id": 1,
+      "name": "Vitakinoasis",
+      "description": "Fugit halal volupta."
     },
     {
-      "id": 6,
-      "name": "skilled gymnast",
-      "description": "possesses superhuman strength, speed, agility, and endurance"
+      "id": 2,
+      "name": "Immortality",
+      "description": "Ducimus laboriosam sed. Aut."
     }
   ]
 }
@@ -94,16 +96,23 @@ Otherwise, it returns
 Returns a list of powers
 
 ```
-{
+[
+  {
     "id": 1,
-    "name": "super strength",
-    "description": "gives the wielder super-human strengths"
-},
-{
+    "name": "Vitakinoasis",
+    "description": "Fugit halal volupta."
+  },
+  {
     "id": 2,
-    "name": "flight",
-    "description": "gives the wielder the ability to fly through the skies at supersonic speed"
-}
+    "name": "Immortality",
+    "description": "Ducimus laboriosam sed. Aut."
+  },
+  {
+    "id": 3,
+    "name": "Morality",
+    "description": "Ducimu Lobitus gerohj huon "
+  }
+]
 ```
 
 ### GET /powers/:id
@@ -113,8 +122,8 @@ If the `Power` exists, return JSON data in the format below:
 ```
 {
   "id": 1,
-  "name": "super strength",
-  "description": "gives the wielder super-human strengths"
+  "name": "Vitakinoasis",
+  "description": "Fugit halal volupta."
 }
 ```
 
@@ -170,32 +179,26 @@ If the `HeroPower` is successfully created, the API will return a `Response` obj
 
 ```
 {
-  "id": 14,
-  "strength": "Strong",
-  "power_id": 3,
-  "hero_id": 4,
-  "hero": {
-    "id": 4,
-    "name": "Chris Evans",
-    "super_name": "Captain America",
+    "id": 3,
+    "name": "Fredia Roberts",
+    "super_name": "Siren XI",
     "powers": [
-      {
-        "id": 1,
-        "name": "super strength",
-        "description": "gives the wielder super-human strengths"
-      },
-      {
-        "id": 5,
-        "name": "endurance && durability",
-        "description": "body regularly replenishes the super-soldier serum; it does not wear off"
-      },
-      {
-        "id": 3,
-        "name": "peak human physical conditioning",
-        "description": "highly skilled martial artist and hand-to-hand combatant Master archer and marksman"
-      }
+        {
+            "id": 1,
+            "name": "Vitakinoasis",
+            "description": "Fugit halal volupta."
+        },
+        {
+            "id": 1,
+            "name": "Vitakinoasis",
+            "description": "Fugit halal volupta."
+        },
+        {
+            "id": 1,
+            "name": "Vitakinoasis",
+            "description": "Fugit halal volupta."
+        }
     ]
-  }
 }
 ```
 
