@@ -21,7 +21,7 @@ Superheroes API is a RESTful API that tracks heroes and their superpowers. It pr
     - Ruby 2.7.4
     - Ruby on Rails 7.0.4
     - Postman (for testing endpoints)
-    - Railway CLI (deploying to Railway App)
+
 
 ## Setup Installation
 
